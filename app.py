@@ -9,6 +9,8 @@ from conection import AlchemyConnection  # Asegúrate de que el path sea correct
 
 app = Flask(__name__)
 
+
+
 @app.route('/')
 def index():
     return render_template('index.html')
@@ -29,10 +31,10 @@ def download():
     # # Crear una cadena de conexión
     # conn_str = f'DRIVER={{SQL Server}};SERVER={server};DATABASE={database};UID={username};PWD={password}'
     # Usar AlchemyConnection para establecer la conexión
-    db_connection = AlchemyConnection('UNOEEDST')
+    db_connection = AlchemyConnection('UNOEE')
     engine = db_connection.create_connection()
-    Session = sessionmaker(bind=engine)
-    session = Session()
+    # Session = sessionmaker(bind=engine)
+    # session = Session()
 
     try:
         # # Conectar a la base de datos
